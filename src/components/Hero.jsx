@@ -2,11 +2,11 @@ import { useEffect, useRef } from 'react';
 import useIsMobile from '../hooks/useIsMobile';
 
 const ROLES = [
-  'PROMPT ENGINEER',
-  'AI STRATEGIST',
-  'ML PRACTITIONER',
-  'LLM WHISPERER',
-  'DATA THINKER',
+  'AI AUTOMATION',
+  'WORKFLOW ARCHITECT',
+  'RAG ENGINEER',
+  'CHATBOT BUILDER',
+  'KI-MEDIEN',
 ];
 
 export default function Hero() {
@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section style={styles.section}>
       <div style={styles.topBar}>
-        <span style={styles.label}>PORTFOLIO / 2025</span>
+        <span style={styles.label}>MANU / 2025</span>
         {!isMobile && <span style={styles.label}>SCROLL DOWN</span>}
       </div>
 
@@ -69,9 +69,9 @@ export default function Hero() {
           ...styles.intro,
           ...(isMobile ? styles.introMobile : {}),
         }}>
-          Nicht noch eine generische AI-Seite.<br />
-          Hier geht es um echte Arbeit, echte Ergebnisse,<br />
-          echtes Verst&auml;ndnis.
+          Vom Marketing in die KI-Welt.<br />
+          Keine Spielerei &mdash; durchdachte Systeme,<br />
+          die Prozesse ver&auml;ndern.
         </p>
       </div>
     </section>

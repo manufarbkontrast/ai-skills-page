@@ -1,4 +1,4 @@
-export default function Marquee({ text = 'AI \u00b7 ML \u00b7 LLM \u00b7 NLP \u00b7 DATA \u00b7 AGENTS \u00b7 RAG \u00b7 FINE-TUNING \u00b7 DEPLOYMENT \u00b7 ', inverted = false }) {
+export default function Marquee({ text = 'N8N \u00b7 RAG \u00b7 AGENTS \u00b7 CHATBOTS \u00b7 DASHBOARDS \u00b7 AUTOMATION \u00b7 KI-MEDIEN \u00b7 WORKFLOWS \u00b7 ', inverted = false }) {
   const repeated = `${text} ${text} ${text} ${text}`;
 
   return (

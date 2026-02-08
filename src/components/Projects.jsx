@@ -3,39 +3,39 @@ import useIsMobile from '../hooks/useIsMobile';
 const PROJECTS = [
   {
     num: '01',
-    title: 'RAG Pipeline f\u00fcr Rechtsdokumente',
-    stack: 'LangChain / Pinecone / GPT-4',
-    result: '73% weniger Recherchezeit',
-    year: '2024',
+    title: 'Content-Maschine f\u00fcr Marketing',
+    stack: 'N8N / Claude / Supabase / React',
+    result: '10x schnellere Produktion',
+    year: '2025',
     description:
-      'Retrieval-Augmented Generation System f\u00fcr eine Kanzlei. Chunking-Strategie, Embedding-Optimierung, Hybrid Search mit Re-Ranking.',
+      'Internes Tool das den kompletten Content-Workflow automatisiert. Von Briefing \u00fcber Texterstellung bis zur Freigabe \u2014 mehrstufige Qualit\u00e4tskontrolle, Markenstimme als System-Prompt, direkter Export in CMS.',
   },
   {
     num: '02',
-    title: 'Multi-Agent Kundenservice',
-    stack: 'CrewAI / Claude / PostgreSQL',
-    result: '89% automatisierte Anfragen',
-    year: '2024',
+    title: 'Firmen-Wissensdatenbank mit RAG',
+    stack: 'Pinecone / Embeddings / GPT-4 / N8N',
+    result: 'Wissen in Sekunden statt Stunden',
+    year: '2025',
     description:
-      'Autonomes Agent-System mit Routing, Eskalations-Logik und menschlicher \u00dcbergabe. Inklusive Sentiment-Analyse und Qualit\u00e4ts-Monitoring.',
+      'Hunderte interne Dokumente, SOPs und Richtlinien in einer durchsuchbaren RAG-Pipeline. Mitarbeiter fragen in nat\u00fcrlicher Sprache, das System liefert pr\u00e4zise Antworten mit Quellenangabe.',
   },
   {
     num: '03',
-    title: 'Predictive Maintenance ML',
-    stack: 'PyTorch / MLflow / AWS SageMaker',
-    result: '40% weniger Ausf\u00e4lle',
-    year: '2023',
+    title: 'KPI-Dashboard mit Live-Daten',
+    stack: 'React / Supabase / N8N / Recharts',
+    result: 'Echtzeit-\u00dcberblick f\u00fcr F\u00fchrung',
+    year: '2024',
     description:
-      'Zeitreihen-Modell f\u00fcr industrielle Sensordaten. Feature Engineering, Anomalie-Erkennung, automatisiertes Retraining.',
+      'Daten aus 5+ Quellen automatisch zusammengef\u00fchrt und visualisiert. Tagesaktuelle Marketing-KPIs, Vertriebs-Pipeline und Finanz\u00fcbersicht in einem Interface. Kein manuelles Excel mehr.',
   },
   {
     num: '04',
-    title: 'Content Generation Engine',
-    stack: 'Fine-tuned Llama / FastAPI / Redis',
-    result: '5x Content-Output',
-    year: '2024',
+    title: 'AI-Chatbot f\u00fcr internen Support',
+    stack: 'Claude / MCP / Supabase / Webhooks',
+    result: '70% weniger Support-Tickets',
+    year: '2025',
     description:
-      'Ma\u00dfgeschneidertes LLM f\u00fcr Marken-konformen Content. Domain-spezifisches Fine-Tuning, Style Transfer, Qualit\u00e4tskontrolle.',
+      'Chatbot der interne FAQs, HR-Fragen und IT-Anfragen beantwortet. Angebunden an Wissensdatenbank, mit Eskalation an echte Menschen wenn n\u00f6tig. Kein generischer Bot \u2014 trainiert auf firmenspezifische Prozesse.',
   },
 ];
 

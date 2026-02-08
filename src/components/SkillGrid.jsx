@@ -3,52 +3,52 @@ import useIsMobile from '../hooks/useIsMobile';
 
 const SKILLS = [
   {
-    id: 'llm',
-    title: 'LLM Engineering',
-    level: 92,
-    tags: ['GPT-4', 'Claude', 'Llama', 'Fine-Tuning'],
+    id: 'automation',
+    title: 'AI Automation',
+    level: 90,
+    tags: ['N8N', 'Make', 'Zapier', 'API Integration'],
     description:
-      'Prompt Design, Chain-of-Thought, RAG-Pipelines, Evaluation & Benchmarking. Nicht einfach "schreib mir was" sondern systematisches Engineering.',
-  },
-  {
-    id: 'ml',
-    title: 'Machine Learning',
-    level: 78,
-    tags: ['PyTorch', 'scikit-learn', 'Transformers', 'MLflow'],
-    description:
-      'Von klassischem ML bis Deep Learning. Modellauswahl, Feature Engineering, Hyperparameter-Tuning, Deployment.',
-  },
-  {
-    id: 'data',
-    title: 'Data Engineering',
-    level: 85,
-    tags: ['Python', 'SQL', 'Pandas', 'dbt'],
-    description:
-      'Daten-Pipelines die nicht um 3 Uhr morgens crashen. ETL/ELT, Data Quality, Orchestrierung, Monitoring.',
+      'Komplexe Workflows die ganze Abteilungen entlasten. Nicht ein Zap hier und da \u2014 durchdachte Systeme mit Fehlerbehandlung, Logging und echtem Business-Impact.',
   },
   {
     id: 'agents',
-    title: 'AI Agents',
+    title: 'AI Agents & Chatbots',
     level: 88,
-    tags: ['LangChain', 'CrewAI', 'Tool Use', 'MCP'],
+    tags: ['Claude', 'GPT-4', 'MCP', 'Custom Bots'],
     description:
-      'Autonome Systeme die tats\u00e4chlich funktionieren. Multi-Agent Orchestrierung, Tool Integration, Guardrails.',
+      'Chatbots die nicht nach 2 Nachrichten aufgeben. Intelligentes Routing, Kontext-Management, Tool-Integration und saubere Eskalation an Menschen.',
   },
   {
-    id: 'vision',
-    title: 'Computer Vision',
-    level: 65,
-    tags: ['OpenCV', 'YOLO', 'Diffusion', 'OCR'],
+    id: 'rag',
+    title: 'RAG & Wissensdatenbanken',
+    level: 85,
+    tags: ['Pinecone', 'Supabase', 'Embeddings', 'Vector Search'],
     description:
-      'Objekterkennung, Bildklassifikation, generative Modelle. Solides Fundament, kein Spezialist.',
+      'Firmenwissen durchsuchbar machen \u2014 nicht mit Ctrl+F sondern mit semantischem Verst\u00e4ndnis. Chunking-Strategien, Re-Ranking, Hybrid Search.',
   },
   {
-    id: 'infra',
-    title: 'AI Infrastructure',
+    id: 'content',
+    title: 'KI-Content & Medien',
+    level: 82,
+    tags: ['Midjourney', 'Runway', 'ElevenLabs', 'Prompt Design'],
+    description:
+      'Bild, Video, Audio, Text \u2014 aber mit Strategie. Markenkonformer Output, konsistente Qualit\u00e4t, skalierbare Produktion. Kein "mach mir mal ein Bild".',
+  },
+  {
+    id: 'web',
+    title: 'Web & Dashboards',
+    level: 78,
+    tags: ['React', 'Supabase', 'Vite', 'Data Viz'],
+    description:
+      'Interne Tools und Dashboards die Daten sichtbar machen. Von der Datenbank bis zur UI \u2014 Fullstack wenn es sein muss.',
+  },
+  {
+    id: 'strategy',
+    title: 'KI-Strategie',
     level: 80,
-    tags: ['Docker', 'AWS', 'Vector DBs', 'APIs'],
+    tags: ['Use Cases', 'ROI', 'Workshops', 'Roadmaps'],
     description:
-      'Vom Notebook zur Produktion. Deployment, Skalierung, Kosten-Optimierung, Monitoring von AI-Systemen.',
+      'Marketing-Background trifft Tech-Verst\u00e4ndnis. Wo lohnt sich KI wirklich? Welche Prozesse zuerst? Kein Buzzword-Consulting sondern konkrete Pl\u00e4ne.',
   },
 ];
 

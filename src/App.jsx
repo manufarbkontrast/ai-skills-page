@@ -16,7 +16,7 @@ export default function App() {
         <Marquee inverted />
         <SkillGrid />
         <Projects />
-        <Marquee text={"PROMPT ENGINEERING \u00b7 EMBEDDINGS \u00b7 VECTOR SEARCH \u00b7 CHAIN-OF-THOUGHT \u00b7 FINE-TUNING \u00b7 RLHF \u00b7 "} />
+        <Marquee text={"VECTOR SEARCH \u00b7 EMBEDDINGS \u00b7 SUPABASE \u00b7 REACT \u00b7 CLAUDE \u00b7 GPT-4 \u00b7 PINECONE \u00b7 MAKE \u00b7 "} />
         <Philosophy />
         <Timeline />
         <Marquee

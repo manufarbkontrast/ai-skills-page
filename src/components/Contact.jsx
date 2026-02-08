@@ -19,7 +19,7 @@ export default function Contact() {
           ...(isMobile ? styles.linksMobile : {}),
         }}>
           <a
-            href="mailto:deine@email.de"
+            href="mailto:manuwolfram1@gmail.com"
             style={{
               ...styles.link,
               ...(isMobile ? styles.linkMobile : {}),
@@ -37,12 +37,12 @@ export default function Contact() {
             <span style={{
               ...styles.linkValue,
               ...(isMobile ? styles.linkValueMobile : {}),
-            }}>deine@email.de</span>
+            }}>manuwolfram1@gmail.com</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
 
           <a
-            href="https://github.com/dein-username"
+            href="https://github.com/manufarbkontrast"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -62,12 +62,37 @@ export default function Contact() {
             <span style={{
               ...styles.linkValue,
               ...(isMobile ? styles.linkValueMobile : {}),
-            }}>github.com/dein-username</span>
+            }}>github.com/manufarbkontrast</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
 
           <a
-            href="https://linkedin.com/in/dein-profil"
+            href="https://instagram.com/manufarbkontrast"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              ...styles.link,
+              ...(isMobile ? styles.linkMobile : {}),
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--accent)';
+              e.currentTarget.style.color = 'var(--white)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.color = 'var(--black)';
+            }}
+          >
+            <span style={styles.linkLabel}>INSTA</span>
+            <span style={{
+              ...styles.linkValue,
+              ...(isMobile ? styles.linkValueMobile : {}),
+            }}>@manufarbkontrast</span>
+            <span style={styles.arrow}>&rarr;</span>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/emanuel-wolfram"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -87,7 +112,7 @@ export default function Contact() {
             <span style={{
               ...styles.linkValue,
               ...(isMobile ? styles.linkValueMobile : {}),
-            }}>linkedin.com/in/dein-profil</span>
+            }}>linkedin.com/in/emanuel-wolfram</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
         </div>
@@ -95,7 +120,7 @@ export default function Contact() {
 
       <footer style={styles.footer}>
         <span style={styles.footerText}>
-          Handgemacht. Kein Template. Kein AI Slop.
+          Manu Wolfram. Marketing + KI.
         </span>
         <span style={styles.footerText}>
           &copy; {new Date().getFullYear()}

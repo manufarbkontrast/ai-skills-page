@@ -2,29 +2,34 @@ import useIsMobile from '../hooks/useIsMobile';
 
 const EVENTS = [
   {
-    year: '2021',
-    title: 'Erste Schritte',
-    detail: 'Python, Data Science Grundlagen, erste ML-Modelle mit scikit-learn',
+    year: 'VOR',
+    title: 'Marketing-Welt',
+    detail: 'Kampagnen, Content-Strategie, Performance Marketing. Das Fundament f\u00fcr alles was danach kommt \u2014 Nutzerverst\u00e4ndnis.',
   },
   {
-    year: '2022',
-    title: 'Deep Learning',
-    detail: 'PyTorch, Computer Vision, NLP Basics, erstes Deployment',
+    year: 'Q1/24',
+    title: 'Der Einstieg',
+    detail: 'Erste Ber\u00fchrung mit ChatGPT \u00fcber Marketing hinaus. Prompt Engineering, API-Calls, Verst\u00e4ndnis f\u00fcr was LLMs k\u00f6nnen und was nicht.',
   },
   {
-    year: '2023',
-    title: 'LLM Revolution',
-    detail: 'Prompt Engineering, Fine-Tuning, RAG-Systeme, erstes Produktiv-System',
+    year: 'Q2/24',
+    title: 'Automation Deep Dive',
+    detail: 'N8N entdeckt und komplett reingefuchst. Erste Workflows f\u00fcr Content-Erstellung, Daten-Synchronisation, interne Prozesse.',
   },
   {
-    year: '2024',
-    title: 'Agent Era',
-    detail: 'Multi-Agent Systeme, MCP, AI Infrastructure, Produktionssysteme',
+    year: 'Q3/24',
+    title: 'RAG & Wissenssysteme',
+    detail: 'Vector Databases, Embeddings, Chunking-Strategien. Erste firmeninterne Wissensdatenbank gebaut. Supabase als Backend.',
+  },
+  {
+    year: 'Q4/24',
+    title: 'Dashboards & Tooling',
+    detail: 'React gelernt, Daten-Dashboards gebaut, interne Tools f\u00fcr Teams entwickelt. Vom Prototyp zum produktiven System.',
   },
   {
     year: 'JETZT',
-    title: 'Was kommt',
-    detail: 'Multimodale Systeme, Agent Frameworks, AI-native Produkte',
+    title: 'Agents & Systeme',
+    detail: 'AI Agents mit MCP, Chatbots f\u00fcr internen Support, KI-Medien-Produktion. Ganze Workflows von A bis Z.',
   },
 ];
 

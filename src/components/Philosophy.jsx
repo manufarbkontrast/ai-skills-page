@@ -1,23 +1,23 @@
 const PRINCIPLES = [
   {
     symbol: '\u2260',
-    title: 'AI ist kein Ersatz f\u00fcr Denken',
-    text: 'Tools sind Tools. Wer nicht versteht was er baut, baut M\u00fcll. Punkt.',
+    title: 'Marketing-Denke trifft Tech',
+    text: 'Ich komme nicht aus der IT-Ecke. Ich komme daher wo die Probleme sind \u2014 und baue L\u00f6sungen die Leute tats\u00e4chlich benutzen.',
   },
   {
     symbol: '\u2234',
-    title: 'Ergebnisse > Buzzwords',
-    text: 'Mir ist egal ob es "GenAI" oder "Traditional ML" hei\u00dft. Was z\u00e4hlt: L\u00f6st es das Problem?',
+    title: 'Systeme statt Spielerei',
+    text: 'Kein "guck mal was AI kann". Jedes Projekt hat ein Ziel: Prozesse schneller, Entscheidungen besser, Teams entlastet.',
   },
   {
     symbol: '\u03bb',
-    title: 'Einfachheit ist schwer',
-    text: 'Die eleganteste L\u00f6sung ist meistens die einfachste. Overengineering ist der Feind.',
+    title: 'Erst verstehen, dann bauen',
+    text: 'Bevor eine Zeile Code geschrieben wird: Was ist das eigentliche Problem? Oft ist die L\u00f6sung einfacher als gedacht.',
   },
   {
     symbol: '\u221e',
-    title: 'Lernen h\u00f6rt nie auf',
-    text: 'Das Feld bewegt sich in Wochen weiter als andere in Jahren. Stillstand = R\u00fcckschritt.',
+    title: '1 Jahr, 100% Intensit\u00e4t',
+    text: 'Von Null auf produktive Systeme in 12 Monaten. Jeden Tag gelernt, gebaut, verworfen, besser gemacht. Das h\u00f6rt nicht auf.',
   },
 ];
 
@@ -26,7 +26,7 @@ export default function Philosophy() {
     <section style={styles.section}>
       <div style={styles.sectionHeader}>
         <h2 style={styles.sectionTitle}>HALTUNG</h2>
-        <span style={styles.sectionNote}>// keine Buzzword-Bingo-Karte</span>
+        <span style={styles.sectionNote}>// warum ich so arbeite</span>
       </div>
 
       <div style={styles.grid}>
@@ -42,8 +42,9 @@ export default function Philosophy() {
       <div style={styles.quote}>
         <span style={styles.quoteOpen}>&ldquo;</span>
         <p style={styles.quoteText}>
-          Die beste AI-L&ouml;sung ist die, bei der niemand fragt
-          ob AI drinsteckt &mdash; weil sie einfach funktioniert.
+          Wer im Marketing gelernt hat zuzuh&ouml;ren,
+          baut bessere Systeme &mdash; weil er wei&szlig; was
+          die Leute wirklich brauchen.
         </p>
       </div>
     </section>
