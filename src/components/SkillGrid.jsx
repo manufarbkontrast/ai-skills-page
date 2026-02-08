@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useIsMobile from '../hooks/useIsMobile';
 
 const SKILLS = [
   {
@@ -104,13 +105,17 @@ function SkillCard({ skill, isExpanded, onToggle }) {
 
 export default function SkillGrid() {
   const [expanded, setExpanded] = useState(null);
+  const isMobile = useIsMobile();
 
   const handleToggle = (id) => {
     setExpanded((prev) => (prev === id ? null : id));
   };
 
   return (
-    <section style={styles.section}>
+    <section style={{
+      ...styles.section,
+      ...(isMobile ? styles.sectionMobile : {}),
+    }}>
       <div style={styles.sectionHeader}>
         <h2 style={styles.sectionTitle}>SKILLS</h2>
         <span style={styles.sectionCount}>
@@ -118,7 +123,10 @@ export default function SkillGrid() {
         </span>
       </div>
 
-      <div style={styles.grid}>
+      <div style={{
+        ...styles.grid,
+        ...(isMobile ? styles.gridMobile : {}),
+      }}>
         {SKILLS.map((skill) => (
           <SkillCard
             key={skill.id}
@@ -136,6 +144,9 @@ const styles = {
   section: {
     padding: '4rem 1.5rem',
     borderBottom: '5px solid var(--black)',
+  },
+  sectionMobile: {
+    padding: '2.5rem 1rem',
   },
   sectionHeader: {
     display: 'flex',
@@ -160,6 +171,9 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
     gap: '0',
+  },
+  gridMobile: {
+    gridTemplateColumns: '1fr',
   },
   card: {
     border: 'var(--border)',

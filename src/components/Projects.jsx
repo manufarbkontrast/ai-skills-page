@@ -1,3 +1,5 @@
+import useIsMobile from '../hooks/useIsMobile';
+
 const PROJECTS = [
   {
     num: '01',
@@ -37,7 +39,26 @@ const PROJECTS = [
   },
 ];
 
-function ProjectRow({ project }) {
+function ProjectRow({ project, isMobile }) {
+  if (isMobile) {
+    return (
+      <div style={styles.rowMobile}>
+        <div style={styles.rowMobileHeader}>
+          <span style={styles.numMobile}>{project.num}</span>
+          <div style={styles.resultBox}>
+            <span style={styles.resultValue}>{project.result}</span>
+          </div>
+        </div>
+        <h3 style={styles.title}>{project.title}</h3>
+        <p style={styles.desc}>{project.description}</p>
+        <div style={styles.meta}>
+          <span style={styles.stack}>{project.stack}</span>
+          <span style={styles.year}>{project.year}</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={styles.row}>
       <div style={styles.numCol}>
@@ -63,16 +84,21 @@ function ProjectRow({ project }) {
 }
 
 export default function Projects() {
+  const isMobile = useIsMobile();
+
   return (
-    <section style={styles.section}>
+    <section style={{
+      ...styles.section,
+      ...(isMobile ? styles.sectionMobile : {}),
+    }}>
       <div style={styles.sectionHeader}>
         <h2 style={styles.sectionTitle}>PROJEKTE</h2>
-        <span style={styles.sectionNote}>{'// ausgewählte Arbeiten'}</span>
+        <span style={styles.sectionNote}>{'// ausgew\u00e4hlte Arbeiten'}</span>
       </div>
 
       <div style={styles.list}>
         {PROJECTS.map((project) => (
-          <ProjectRow key={project.num} project={project} />
+          <ProjectRow key={project.num} project={project} isMobile={isMobile} />
         ))}
       </div>
     </section>
@@ -83,6 +109,9 @@ const styles = {
   section: {
     padding: '4rem 1.5rem',
     borderBottom: '5px solid var(--black)',
+  },
+  sectionMobile: {
+    padding: '2.5rem 1rem',
   },
   sectionHeader: {
     display: 'flex',
@@ -117,10 +146,29 @@ const styles = {
     borderBottom: 'var(--border)',
     alignItems: 'start',
   },
+  rowMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.75rem',
+    padding: '1.5rem 0',
+    borderBottom: 'var(--border)',
+  },
+  rowMobileHeader: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   numCol: {},
   num: {
     fontFamily: 'var(--font-mono)',
     fontSize: '2.5rem',
+    fontWeight: 700,
+    color: 'var(--light-gray)',
+    lineHeight: 1,
+  },
+  numMobile: {
+    fontFamily: 'var(--font-mono)',
+    fontSize: '1.8rem',
     fontWeight: 700,
     color: 'var(--light-gray)',
     lineHeight: 1,

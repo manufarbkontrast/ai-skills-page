@@ -1,3 +1,5 @@
+import useIsMobile from '../hooks/useIsMobile';
+
 const EVENTS = [
   {
     year: '2021',
@@ -27,8 +29,13 @@ const EVENTS = [
 ];
 
 export default function Timeline() {
+  const isMobile = useIsMobile();
+
   return (
-    <section style={styles.section}>
+    <section style={{
+      ...styles.section,
+      ...(isMobile ? styles.sectionMobile : {}),
+    }}>
       <div style={styles.sectionHeader}>
         <h2 style={styles.sectionTitle}>TIMELINE</h2>
         <span style={styles.sectionNote}>// der Weg hierher</span>
@@ -38,7 +45,10 @@ export default function Timeline() {
         {EVENTS.map((event, i) => {
           const isLast = i === EVENTS.length - 1;
           return (
-            <div key={event.year} style={styles.row}>
+            <div key={event.year} style={{
+              ...styles.row,
+              ...(isMobile ? styles.rowMobile : {}),
+            }}>
               <div style={styles.yearCol}>
                 <span
                   style={{
@@ -84,6 +94,9 @@ const styles = {
     padding: '4rem 1.5rem',
     borderBottom: '5px solid var(--black)',
   },
+  sectionMobile: {
+    padding: '2.5rem 1rem',
+  },
   sectionHeader: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -115,6 +128,11 @@ const styles = {
     gridTemplateColumns: '80px 30px 1fr',
     gap: '0.5rem',
     minHeight: '100px',
+  },
+  rowMobile: {
+    gridTemplateColumns: '50px 24px 1fr',
+    gap: '0.4rem',
+    minHeight: '80px',
   },
   yearCol: {
     textAlign: 'right',

@@ -1,16 +1,29 @@
+import useIsMobile from '../hooks/useIsMobile';
+
 export default function Contact() {
+  const isMobile = useIsMobile();
+
   return (
-    <section style={styles.section}>
+    <section style={{
+      ...styles.section,
+      ...(isMobile ? styles.sectionMobile : {}),
+    }}>
       <div style={styles.content}>
         <h2 style={styles.heading}>
           <span style={styles.line1}>LASS UNS</span>
           <span style={styles.line2}>REDEN.</span>
         </h2>
 
-        <div style={styles.links}>
+        <div style={{
+          ...styles.links,
+          ...(isMobile ? styles.linksMobile : {}),
+        }}>
           <a
             href="mailto:deine@email.de"
-            style={styles.link}
+            style={{
+              ...styles.link,
+              ...(isMobile ? styles.linkMobile : {}),
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'var(--accent)';
               e.currentTarget.style.color = 'var(--white)';
@@ -21,7 +34,10 @@ export default function Contact() {
             }}
           >
             <span style={styles.linkLabel}>EMAIL</span>
-            <span style={styles.linkValue}>deine@email.de</span>
+            <span style={{
+              ...styles.linkValue,
+              ...(isMobile ? styles.linkValueMobile : {}),
+            }}>deine@email.de</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
 
@@ -29,7 +45,10 @@ export default function Contact() {
             href="https://github.com/dein-username"
             target="_blank"
             rel="noopener noreferrer"
-            style={styles.link}
+            style={{
+              ...styles.link,
+              ...(isMobile ? styles.linkMobile : {}),
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'var(--accent)';
               e.currentTarget.style.color = 'var(--white)';
@@ -40,7 +59,10 @@ export default function Contact() {
             }}
           >
             <span style={styles.linkLabel}>GITHUB</span>
-            <span style={styles.linkValue}>github.com/dein-username</span>
+            <span style={{
+              ...styles.linkValue,
+              ...(isMobile ? styles.linkValueMobile : {}),
+            }}>github.com/dein-username</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
 
@@ -48,7 +70,10 @@ export default function Contact() {
             href="https://linkedin.com/in/dein-profil"
             target="_blank"
             rel="noopener noreferrer"
-            style={styles.link}
+            style={{
+              ...styles.link,
+              ...(isMobile ? styles.linkMobile : {}),
+            }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'var(--accent)';
               e.currentTarget.style.color = 'var(--white)';
@@ -59,7 +84,10 @@ export default function Contact() {
             }}
           >
             <span style={styles.linkLabel}>LINKEDIN</span>
-            <span style={styles.linkValue}>linkedin.com/in/dein-profil</span>
+            <span style={{
+              ...styles.linkValue,
+              ...(isMobile ? styles.linkValueMobile : {}),
+            }}>linkedin.com/in/dein-profil</span>
             <span style={styles.arrow}>&rarr;</span>
           </a>
         </div>
@@ -84,6 +112,10 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+  },
+  sectionMobile: {
+    padding: '2.5rem 1rem 1.5rem',
+    minHeight: '70vh',
   },
   content: {
     flex: 1,
@@ -113,6 +145,9 @@ const styles = {
     flexDirection: 'column',
     maxWidth: '600px',
   },
+  linksMobile: {
+    maxWidth: '100%',
+  },
   link: {
     display: 'flex',
     alignItems: 'center',
@@ -122,6 +157,10 @@ const styles = {
     textDecoration: 'none',
     transition: 'background 0.2s, color 0.2s',
     cursor: 'pointer',
+  },
+  linkMobile: {
+    gap: '0.75rem',
+    padding: '1rem 0.75rem',
   },
   linkLabel: {
     fontFamily: 'var(--font-mono)',
@@ -135,6 +174,12 @@ const styles = {
     fontSize: '1rem',
     fontWeight: 700,
     flex: 1,
+  },
+  linkValueMobile: {
+    fontSize: '0.8rem',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
   },
   arrow: {
     fontSize: '1.2rem',

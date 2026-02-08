@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import useIsMobile from '../hooks/useIsMobile';
 
 const ROLES = [
   'PROMPT ENGINEER',
@@ -11,6 +12,7 @@ const ROLES = [
 export default function Hero() {
   const roleRef = useRef(null);
   const indexRef = useRef(0);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +37,7 @@ export default function Hero() {
     <section style={styles.section}>
       <div style={styles.topBar}>
         <span style={styles.label}>PORTFOLIO / 2025</span>
-        <span style={styles.label}>SCROLL DOWN</span>
+        {!isMobile && <span style={styles.label}>SCROLL DOWN</span>}
       </div>
 
       <div style={styles.content}>
@@ -48,16 +50,25 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div style={styles.roleBox}>
+        <div style={{
+          ...styles.roleBox,
+          ...(isMobile ? styles.roleBoxMobile : {}),
+        }}>
           <span style={styles.roleLabel}>AKTUELL:</span>
-          <span ref={roleRef} style={styles.role}>
+          <span ref={roleRef} style={{
+            ...styles.role,
+            ...(isMobile ? styles.roleMobile : {}),
+          }}>
             {ROLES[0]}
           </span>
         </div>
       </div>
 
       <div style={styles.bottomBar}>
-        <p style={styles.intro}>
+        <p style={{
+          ...styles.intro,
+          ...(isMobile ? styles.introMobile : {}),
+        }}>
           Nicht noch eine generische AI-Seite.<br />
           Hier geht es um echte Arbeit, echte Ergebnisse,<br />
           echtes Verst&auml;ndnis.
@@ -138,6 +149,13 @@ const styles = {
     border: 'var(--border)',
     width: 'fit-content',
   },
+  roleBoxMobile: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    gap: '0.4rem',
+    fontSize: '0.75rem',
+    width: '100%',
+  },
   roleLabel: {
     color: 'var(--gray)',
     fontSize: '0.7rem',
@@ -147,6 +165,9 @@ const styles = {
     fontWeight: 700,
     transition: 'opacity 0.3s, transform 0.3s',
     letterSpacing: '0.05em',
+  },
+  roleMobile: {
+    fontSize: '0.75rem',
   },
   bottomBar: {
     display: 'flex',
@@ -162,5 +183,10 @@ const styles = {
     color: 'var(--gray)',
     textAlign: 'right',
     maxWidth: '380px',
+  },
+  introMobile: {
+    textAlign: 'left',
+    fontSize: '0.75rem',
+    maxWidth: '100%',
   },
 };
